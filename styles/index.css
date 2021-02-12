@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+nav {
+  width: 200px;
+  height: 245px;
+  z-index: 50;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+button {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+
+    width: 100%;
+    height: 50px;
+    transition: .3s;
+    position: relative;
+    color: white;
+    margin-bottom: 5px;
+    font-size: 14px;
+    background-color: black;
+    border: none;
+    outline: none;
+
+    /* background: none;
+    color: #000; */
+
+    cursor: pointer;
+}
+button::before {
+    content: '';
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .3s;
+    background: rgba(0,0,0,1);
+}
+button:nth-child(1)::before {
+    content: 'home';
+}
+button:nth-child(2)::before {
+    content: 'work';
+}
+button:nth-child(3)::before {
+    content: 'about us';
+}
+button:hover::before {
+    transform: translateX(-50px);
+}
+#canvas1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: url("#goo");
+    opacity: 1;
+}
+svg {
+  display: none;
+}
+footer {
+  font-family: monospace;
+  width: 95%;
+  color: black;
+  font-size: 15px;
+  margin-left: 5px;
+  text-shadow: 1px 1px 1px #737373; 
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    font-family: 'Rubik Mono One', sans-serif;
+    color: #000;
+
+    width: 100%;
+    height: 100%;
+  
+    opacity: 1;
+    z-index: 50;
+  }
+  
+  .text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+    text-align: center;
+  
+    width: 100vw;
+    height: calc(100vh - 60px);
+
+    margin-top: -50px;
+  }
+  
+  .text > h1 {
+    font-size: 60px;
+    font-weight: bold;
+  }
+
+  .text > span {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+
+    margin-top: -40px;
+  }
